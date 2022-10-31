@@ -58,9 +58,8 @@ plots_function <- function(df, y, x) {                      # Defining the funct
 DRG_data_2 <- DRG_data %>% # A df to create Function 2
   select("DRG Definition", "Average Medicare Payments") %>%
   rename(DRG_Code = "DRG Definition",
-         Avg_Medicare_Payments = "Average Medicare Payments")
-Mod_DRG_Data_q2 <- DRG_data_2 # A df to combine Function 1 and 2
-
+         Avg_Medicare_Payments = "Average Medicare Payments") %>%
+  mutate(DRG_Code = str_sub(DRG_Code,1,3))
 
 #' Function 2
 #'
