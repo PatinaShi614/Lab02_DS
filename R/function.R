@@ -31,6 +31,7 @@ options(scipen=10000)                                       # To not allow expon
 #'
 #' @return boxplot of payments by DRG code
 #' @export
+#' @importFrom ggplot2 tidyverse stringr Hmisc janitor
 #'
 #' @examples
 #'
@@ -67,7 +68,7 @@ Mod_DRG_Data_q2 <- DRG_data_2 # A df to combine Function 1 and 2
 #'
 #' @return a table that calculates statistics over all of the DRG codes for average Medicare payments
 #' @export
-#'
+#' @importFrom tidyverse
 #' @examples
 statistic_2 <- function (x) { # A statistics function that includes options for mean, sd, or median
   if (x =='mean') {
