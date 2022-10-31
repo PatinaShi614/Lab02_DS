@@ -12,6 +12,7 @@ library(stringr)
 # Reading Data
 load("data/DRG_data.RData")
 DRG_Data_Question_1 <- DRG_data %>% clean_names()
+
 # Modifying the Data for Better Plot for Function 1
 
 Mod_DRG_Data <- DRG_Data_Question_1 %>% select(drg_definition,average_covered_charges,average_total_payments,average_medicare_payments) %>%
