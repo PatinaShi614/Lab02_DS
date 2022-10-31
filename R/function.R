@@ -10,6 +10,7 @@ library(stringr)
 # setwd("..")
 # save(DRG_data, file = 'DataScience_Lab02/data/DRG_data.RData')
 # Reading Data
+load("data/DRG_data.RData")
 DRG_Data_Question_1 <- DRG_data %>% clean_names()
 # Modifying the Data for Better Plot for Function 1
 
